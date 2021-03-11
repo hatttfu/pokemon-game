@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Header from './components/Header/Header.js';
+import Layout from './components/Layout/Layout.js';
+import Footer from './components/Footer/Footer.js';
+
 function App() {
+  const color = '#e2e2e2';
+  const LayoutStyle = {
+    backgroundColor: color
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header title="Header's title" descr="Header's description!"/>
+      <Layout style={LayoutStyle} title="Layout's title!" descr="Layout's description!" urlBg="" colorBg="" />
+      <Layout style={LayoutStyle} title="Layout's title!" descr="Layout's description!" urlBg="" colorBg=""/>
+      <Layout style={LayoutStyle} title="Layout's title!" descr="Layout's description!" urlBg="" colorBg=""/>
+      <Footer />
+    </>
   );
 }
 
