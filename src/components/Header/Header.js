@@ -1,21 +1,13 @@
 import s from './style.module.css';
 
-// import { ReactComponent as Stars} from '../../assets/Stars.svg;'
-// import { ReactComponent as Trees} from '../../assets/Trees.svg;'
-
-import Stars from '../../assets/Stars.svg';
-import Trees from '../../assets/Trees.svg';
-
-console.log(Stars);
-console.log(Trees);
-
 const Header = ( { title, descr }) => {
     return(
-    <header className={ s.separator } >
+    <header className={ s.root } >
         <div className={ s.forest }></div>
-        <div className={ s.contsiner }>
-            <h1>{ title }</h1>
-            <p>{ descr }</p>
+        <div className={ s.container }>
+            { title ? ( <h1>{title}</h1>) : <h1>Пропсы не дошли...</h1>
+            }
+            {descr && <p>{ descr }</p>}   
         </div>
     </header>
     );

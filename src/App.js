@@ -1,21 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
 import Header from './components/Header/Header.js';
 import Layout from './components/Layout/Layout.js';
 import Footer from './components/Footer/Footer.js';
+import urlBg  from "./assets/bg1.jpg";
 
 function App() {
-  const color = '#e2e2e2';
-  const LayoutStyle = {
-    backgroundColor: color
-  }
+
   return (
     <>
       <Header title="Header's title" descr="Header's description!"/>
-      <Layout style={LayoutStyle} title="Layout's title!" descr="Layout's description!" urlBg="" colorBg="" />
-      <Layout style={LayoutStyle} title="Layout's title!" descr="Layout's description!" urlBg="" colorBg=""/>
-      <Layout style={LayoutStyle} title="Layout's title!" descr="Layout's description!" urlBg="" colorBg=""/>
+      <Layout title="Layout's title!" descr="Layout's description!" urlBg={urlBg} colorBg={null} />
+      <Layout title="Layout's title!" descr="Layout's description!" urlBg={null} colorBg="#e2e2e2"/>
+      <Layout title="Layout's title!" descr="Layout's description!" urlBg={urlBg} colorBg={null}/>
       <Footer />
     </>
   );

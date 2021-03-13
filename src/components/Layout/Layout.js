@@ -1,16 +1,23 @@
 import styles from './style.module.css';
 
-const Layout = ( {title, descr}) => {
+
+const Layout = ( {title, descr, urlBg, colorBg}) => {
+    const LayoutImage = {
+        backgroundImage: `url(${urlBg})`,
+        backgroundSize: 'cover',
+        backgroundColor: colorBg
+      }
+
     return (
-        <section className={ styles.root } >
+        <section style={LayoutImage}  className={ styles.root } >
             <div className={ styles.wrapper }>
                 <article>
                     <div className="title">
-                        <h3>{ title }</h3>
+                        {title && <h3>{ title }</h3>}
                         <span className={ styles.separator }></span>
                     </div>
                     <div className={ styles.desc, styles.full }>
-                        <p>{ descr }</p>
+                        { descr && <p>{ descr }</p>}
                     </div>
                 </article>
             </div>
